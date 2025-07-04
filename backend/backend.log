@@ -1,0 +1,32 @@
+2025-07-03 23:20:07,016 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.26.6:5000
+2025-07-03 23:20:07,016 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-03 23:20:07,894 - INFO - 127.0.0.1 - - [03/Jul/2025 23:20:07] "GET /health HTTP/1.1" 200 -
+2025-07-03 23:28:04,860 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.26.6:5000
+2025-07-03 23:28:04,861 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-03 23:28:05,768 - INFO - 127.0.0.1 - - [03/Jul/2025 23:28:05] "GET /health HTTP/1.1" 200 -
+2025-07-03 23:28:08,082 - INFO - 127.0.0.1 - - [03/Jul/2025 23:28:08] "GET /health HTTP/1.1" 200 -
+2025-07-03 23:28:16,500 - INFO - 127.0.0.1 - - [03/Jul/2025 23:28:16] "OPTIONS /generar_aleatorios/5 HTTP/1.1" 200 -
+2025-07-03 23:28:16,767 - INFO - 127.0.0.1 - - [03/Jul/2025 23:28:16] "GET /generar_aleatorios/5 HTTP/1.1" 200 -
+2025-07-03 23:28:23,968 - INFO - 127.0.0.1 - - [03/Jul/2025 23:28:23] "OPTIONS /simular HTTP/1.1" 200 -
+2025-07-03 23:28:24,281 - INFO - 127.0.0.1 - - [03/Jul/2025 23:28:24] "POST /simular HTTP/1.1" 200 -
+2025-07-03 23:28:30,281 - INFO - 127.0.0.1 - - [03/Jul/2025 23:28:30] "OPTIONS /comparar HTTP/1.1" 200 -
+2025-07-03 23:28:30,597 - INFO - 127.0.0.1 - - [03/Jul/2025 23:28:30] "POST /comparar HTTP/1.1" 200 -
+2025-07-03 23:46:38,293 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.26.6:5000
+2025-07-03 23:46:38,294 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-03 23:46:41,213 - INFO - 127.0.0.1 - - [03/Jul/2025 23:46:41] "GET /health HTTP/1.1" 200 -
+2025-07-03 23:46:43,566 - INFO - 127.0.0.1 - - [03/Jul/2025 23:46:43] "GET /health HTTP/1.1" 200 -
+2025-07-03 23:46:47,587 - INFO - 127.0.0.1 - - [03/Jul/2025 23:46:47] "OPTIONS /generar_aleatorios/5 HTTP/1.1" 200 -
+2025-07-03 23:46:47,843 - INFO - 127.0.0.1 - - [03/Jul/2025 23:46:47] "GET /generar_aleatorios/5 HTTP/1.1" 200 -
+2025-07-03 23:46:53,615 - INFO - 127.0.0.1 - - [03/Jul/2025 23:46:53] "OPTIONS /simular HTTP/1.1" 200 -
+2025-07-03 23:46:53,932 - INFO - 127.0.0.1 - - [03/Jul/2025 23:46:53] "POST /simular HTTP/1.1" 200 -
+2025-07-03 23:46:59,342 - INFO - 127.0.0.1 - - [03/Jul/2025 23:46:59] "OPTIONS /comparar HTTP/1.1" 200 -
+2025-07-03 23:46:59,650 - INFO - 127.0.0.1 - - [03/Jul/2025 23:46:59] "POST /comparar HTTP/1.1" 200 -
