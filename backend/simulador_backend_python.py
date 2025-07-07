@@ -20,7 +20,7 @@ import threading
 import time
 import os
 
-# Configurar logging con UTF-8
+# Configuracion logging con UTF-8
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -40,7 +40,7 @@ class Proceso:
     prioridad: bool
     color: str = "#3498db"
     
-    # Campos calculados durante la simulación
+    # Campos a calcular durante la simulación
     tiempo_inicio: int = 0
     tiempo_finalizacion: int = 0
     tiempo_espera: int = 0
@@ -113,14 +113,14 @@ class SimuladorColas:
         ejecucion = []
         
         while pendientes:
-            # Filtrar procesos disponibles
+            # Filtra procesos disponibles
             disponibles = [p for p in pendientes if p.tiempo_llegada <= tiempo_actual]
             
             if not disponibles:
                 tiempo_actual = min(p.tiempo_llegada for p in pendientes)
                 continue
             
-            # Seleccionar el proceso más corto
+            # Selecciona el proceso más corto
             proceso = min(disponibles, key=lambda x: x.tiempo_ejecucion)
             
             tiempo_inicio = tiempo_actual
@@ -170,7 +170,7 @@ class SimuladorColas:
             
             proceso = cola.pop(0)
             
-            # Registrar tiempo de respuesta en primera ejecución
+            # Registra tiempo de respuesta en primera ejecución
             if proceso.nombre not in tiempos_respuesta:
                 tiempos_respuesta[proceso.nombre] = tiempo_actual - proceso.tiempo_llegada
             
@@ -188,7 +188,7 @@ class SimuladorColas:
             proceso.tiempo_restante -= tiempo_ejecucion_actual
             tiempo_actual = tiempo_fin
             
-            # Agregar procesos que llegaron durante la ejecución
+            # Agrega procesos que llegaron durante la ejecución
             while i < len(procesos_copia) and procesos_copia[i].tiempo_llegada <= tiempo_actual:
                 cola.append(procesos_copia[i])
                 i += 1
@@ -212,14 +212,14 @@ class SimuladorColas:
         ejecucion = []
         
         while pendientes:
-            # Filtrar procesos disponibles
+            # Filtra procesos disponibles
             disponibles = [p for p in pendientes if p.tiempo_llegada <= tiempo_actual]
             
             if not disponibles:
                 tiempo_actual = min(p.tiempo_llegada for p in pendientes)
                 continue
             
-            # Seleccionar por prioridad (alta prioridad primero, luego por llegada)
+            # Selecciona por prioridad (alta prioridad primero, luego por llegada)
             proceso = max(disponibles, key=lambda x: (x.prioridad, -x.tiempo_llegada))
             
             tiempo_inicio = tiempo_actual
@@ -296,7 +296,7 @@ try:
 except:
     template_folder = None
 
-#static_folder = obtener_ruta_absoluta("static")  # por si usas CSS/JS
+#static_folder = obtener_ruta_absoluta("static") para css y js no incluye al estar todo en el HTML
 
 app = Flask(__name__, template_folder=template_folder)
 
@@ -522,7 +522,7 @@ def main():
     ]
     
     for nombre, funcion in algoritmos:
-        print(f"\n🔄 {nombre}")
+        print(f"\n {nombre}")
         print("-" * 40)
         
         resultado = funcion(procesos.copy())
@@ -540,10 +540,10 @@ if __name__ == '__main__':
     
     
     if len(sys.argv) > 1 and sys.argv[1] == 'test':
-        # Ejecutar pruebas en consola
+        # Ejecuta pruebas en consola
         main()
     else:
-        # Ejecutar servidor web
+        # Ejecuta servidor web
         print(" Iniciando servidor Flask...")
         print(" API disponible en: http://localhost:5000")
         print(" Frontend HTML puede conectarse a esta API")
