@@ -37,7 +37,7 @@ class SimuladorLauncher:
         """Configura todas las rutas necesarias"""
         self.current_dir = Path(__file__).parent.absolute()
         
-        # Si está empaquetado, usar _MEIPASS
+        # Si está empaquetado, se usa _MEIPASS
         if getattr(sys, 'frozen', False):
             self.bundle_dir = Path(sys._MEIPASS)
             self.frontend_html = self.bundle_dir / "frontend" / "simulador_conectado.html"
@@ -48,7 +48,7 @@ class SimuladorLauncher:
             self.backend_exe = self.current_dir / "backend" / "simulador_backend_python.exe"
             self.backend_py = self.current_dir / "backend" / "simulador_backend_python.py"
         
-        # Verificar que los archivos existan
+        # Verifica que los archivos existan
         if not self.frontend_html.exists():
             raise FileNotFoundError(f"Frontend no encontrado: {self.frontend_html}")
             
